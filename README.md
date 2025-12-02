@@ -20,6 +20,7 @@ npm install
 npx cypress open
 
 ## 📂 Project Structure
+```
 qa-cypress-saucedemo/
 │
 ├── cypress/
@@ -28,7 +29,7 @@ qa-cypress-saucedemo/
 │   └── support/      # Helpers
 ├── package.json
 └── README.md
-
+```
 ## 📊 Notes
 - Tests run against the public SauceDemo site.
 - Cypress GUI (npx cypress open) or headless mode (npx cypress run) can be used.
