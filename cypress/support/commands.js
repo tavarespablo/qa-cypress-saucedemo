@@ -8,7 +8,6 @@ Cypress.Commands.add('login', () => {
     LoginPage.fillUsername('standard_user');
     LoginPage.fillPassword('secret_sauce');
     LoginPage.submit();
-
         
     // verification
     cy.get('[data-test=title]').should('be.visible')

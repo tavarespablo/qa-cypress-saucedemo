@@ -11,6 +11,7 @@ describe('Purchase flow completed', () => {
 
         cy.get('#checkout').click();
 
+        // checkout information
         cy.fixture('checkout').then((data) => {
             cy.checkoutInfo(data)
         })
