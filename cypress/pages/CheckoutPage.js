@@ -1,4 +1,8 @@
 class CheckoutPage {
+    proceedtoCheckout() {
+        cy.get('[data-test=checkout]').click()
+    }
+    
     fillForm(firstname, lastname, postalcode) {
         cy.get('#first-name').clear().type(firstname);
         cy.get('#last-name').clear().type(lastname);

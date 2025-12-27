@@ -4,11 +4,10 @@ class ProductsPage {
     }
     addToCart(product) {
         this.findProduct(product).find('button').click()
-
         cy.get('#shopping_cart_container').click()
-
-        cy.get('.cart_item .inventory_item_name').should('contain', product)
-        cy.get('.cart_item').should('have.length', 1)
+    }
+    getCartItem() {
+        return cy.get('.cart_item')
     }
 }
 

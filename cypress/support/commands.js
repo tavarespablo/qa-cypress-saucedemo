@@ -8,21 +8,20 @@ Cypress.Commands.add('login', () => {
     LoginPage.fillUsername('standard_user');
     LoginPage.fillPassword('secret_sauce');
     LoginPage.submit();
-        
-    // verification
-    cy.get('[data-test=title]').should('be.visible')
 });
 
 Cypress.Commands.add('purchase', ({product}) => {
     ProductsPage.findProduct(product);
     ProductsPage.addToCart(product);
+    ProductsPage.getCartItem();
 })
 
 Cypress.Commands.add('checkoutInfo', ({ firstname, lastname, zip }) => {
+    CheckoutPage.proceedtoCheckout();
     CheckoutPage.fillForm(firstname, lastname, zip);
     CheckoutPage.continue();
 })
 
 Cypress.Commands.add('finish', () => {
-    FinishPage.finish()
+    FinishPage.finish();
 })
