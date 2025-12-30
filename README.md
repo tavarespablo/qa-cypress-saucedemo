@@ -60,3 +60,4 @@ This ensure the main purchase flow of SauceDemo works end-to-end.
 ## Notes
 - Tests run against the public SauceDemo site.
 - Cypress GUI (npx cypress open) or headless mode (npx cypress run) can be used.
+- This project runs Cypress using Node.js 20 to ensure compatibility in CI environments.
