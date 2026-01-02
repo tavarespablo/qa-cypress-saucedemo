@@ -18,8 +18,9 @@ cd qa-cypress-saucedemo
 
 ### 2. Install dependencies
 npm install
-### 3. Run tests
+### 3. Run tests in Cypress UI or in headless mode
 npx cypress open
+npx cypress run
 
 ## Project Structure
 ```
@@ -41,6 +42,11 @@ qa-cypress-saucedemo/
 ├── package.json
 └── README.md
 ```
+## Technical decisions
+- Cypress was chosen for its reliability and developer-friendly debugging.
+- Tests are focused on the main purchase flow.
+- `cy.session()` is not used due to limitations with the SauceDemo application.
+
 ## Architecture Overview
 - Each page of the application has its own class.
 - Reusable commands located in cypress/support/commands.js.
