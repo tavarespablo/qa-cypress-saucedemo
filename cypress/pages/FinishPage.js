@@ -1,9 +1,11 @@
+import { finish } from '../elements/finish.elements'
+
 class FinishPage {
     finish() {
-        cy.get('#finish').click();
+        cy.get(finish.confirmOrder).click();
     }
     successMessage() {
-        return cy.get('[data-test=complete-header]');
+        return cy.get(finish.checkoutComplete);
     }
 }
 

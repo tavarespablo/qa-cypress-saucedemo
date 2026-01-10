@@ -1,5 +1,7 @@
 //purchase-flow.cy.js
-import FinishPage from '../pages/FinishPage'
+import FinishPage from '../pages/FinishPage';
+import { productElements } from '../elements/products.elements';
+
 describe('Purchase flow completed', () => {
     it ('should complete a purchase flow', () => {
 
@@ -11,8 +13,8 @@ describe('Purchase flow completed', () => {
             cy.purchase({ product });
 
             // purchase assert
-            cy.get('.cart_item .inventory_item_name').should('contain', product)            
-            cy.get('.cart_item').should('have.length', 1)
+            cy.get(productElements.itemName).should('contain', product)            
+            cy.get(productElements.itemQt).should('have.length', 1)
 
             cy.checkoutInfo(data)
             cy.finish();
