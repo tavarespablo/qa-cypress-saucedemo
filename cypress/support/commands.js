@@ -16,9 +16,9 @@ Cypress.Commands.add('purchase', ({product}) => {
     ProductsPage.getCartItem();
 })
 
-Cypress.Commands.add('checkoutInfo', ({ firstname, lastname, zip }) => {
+Cypress.Commands.add('checkoutInfo', ({ firstname, lastname, postalcode }) => {
     CheckoutPage.proceedtoCheckout();
-    CheckoutPage.fillForm(firstname, lastname, zip);
+    CheckoutPage.fillForm(firstname, lastname, postalcode);
     CheckoutPage.continue();
 })
 

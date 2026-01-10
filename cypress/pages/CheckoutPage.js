@@ -1,16 +1,18 @@
+import { checkout } from '../elements/checkout.elements'
+
 class CheckoutPage {
     proceedtoCheckout() {
-        cy.get('[data-test=checkout]').click()
+        cy.get(checkout.proceed).click()
     }
     
     fillForm(firstname, lastname, postalcode) {
-        cy.get('#first-name').clear().type(firstname);
-        cy.get('#last-name').clear().type(lastname);
-        cy.get('#postal-code').clear().type(postalcode);
+        cy.get(checkout.firstName).clear().type(firstname);
+        cy.get(checkout.lastName).clear().type(lastname);
+        cy.get(checkout.postalCode).clear().type(postalcode);
     }
 
     continue() {
-        cy.get('#continue').click();
+        cy.get(checkout.finishForm).click();
         cy.url().should('include', '/checkout-step-two.html')
     }
 }

@@ -1,15 +1,17 @@
+import { loginElements } from "../elements/login.elements";
+
 class LoginPage {
     visit() {
         cy.visit('/');
     }
     fillUsername(username) {
-        cy.get('#user-name').clear().type(username);
+        cy.get(loginElements.username).clear().type(username);
     }
     fillPassword(password) {
-        cy.get('#password').clear().type(password);
+        cy.get(loginElements.password).clear().type(password);
     }
     submit() {
-        cy.get('#login-button').click();
+        cy.get(loginElements.loginButton).click();
     }
     assertLoggedIn() {
         cy.url().should('include', '/inventory.html');
