@@ -18,6 +18,8 @@ describe('Purchase flow completed', () => {
 
             cy.checkoutInfo(data)
             cy.finish();
+
+            // order completed assert
             FinishPage.successMessage().should('be.visible')
             })
     })

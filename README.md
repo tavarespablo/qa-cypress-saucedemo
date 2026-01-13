@@ -1,5 +1,7 @@
 # QA Cypress SauceDemo
 
+![Purchase Flow](assets/purchase-flow.gif)
+
 ## Project Overview
 Automated end-to-end tests using **Cypress** for the [SauceDemo](https://www.saucedemo.com) application.  
 Focus: login flows, product listing, checkout validation, and order confirmation.
